@@ -1,6 +1,10 @@
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync } from "node:fs";
 
-const ENTRY = "My keys are asleep — it's 3 AM, and the last thing they signed was your 2 AM 'definitely not a rug pull' promise. Ask again at sunrise.";
+// Excuse from a hardware wallet refusing to sign at 3 AM, for the
+// "The 3 AM Excuse" bounty on make.fun.
+const entry =
+  "I can't sign at 3 AM. My screen is asleep, my buttons are tired, and honestly, so is your judgment.";
 
-mkdirSync('/output', { recursive: true });
-writeFileSync('/output/entry.txt', ENTRY);
+mkdirSync("/output", { recursive: true });
+writeFileSync("/output/entry.txt", entry);
+console.log(entry);
